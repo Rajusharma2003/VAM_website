@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Viral Ads Media</title>
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- All CSS files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/master.css">
+  <link rel="stylesheet" href="style.css">
+
+
+   <style>  
+        .terms-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .terms-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: var(--dark-color);
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .last-updated {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .section-divider {
+            border-top: 1px solid #e3e6f0;
+            margin: 2rem 0;
+        }
+        
+        .back-to-home {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .back-to-home:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background-color: rgba(78, 115, 223, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .terms-container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="dark">
+
+  <!-- Cursor Animation -->
+  <div class="cursor1"></div>
+  <div class="cursor2"></div>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loading">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <div class="bar bar4"></div>
+      <div class="bar bar5"></div>
+      <div class="bar bar6"></div>
+      <div class="bar bar7"></div>
+      <div class="bar bar8"></div>
+    </div>
+  </div>
+
+  <!-- Switcher Area Start -->
+  <div class="switcher__area">
+    <div class="switcher__icon">
+      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="switcher__items">
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <h2 class="switcher__title">Cursor</h2>
+        </div>
+        <div class="switcher__btn">
+          <select name="cursor-style" id="cursor_style">
+            <option value="1">default</option>
+            <option selected value="2">animated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <h2 class="switcher__title">mode</h2>
+        </div>
+        <div class="switcher__btn mode-type wc-col-2">
+          <button data-mode="light">light</button>
+          <button class="active" data-mode="dark">dark</button>
+        </div>
+      </div>
+
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <h2 class="switcher__title">Language Support</h2>
+        </div>
+        <div class="switcher__btn lang_dir wc-col-2">
+          <button class="active" data-mode="ltr">LTR</button>
+          <button data-mode="rtl">RTL</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Switcher Area End -->
+
+  <!-- Scroll Smoother -->
+  <div class="has-smooth" id="has_smooth"></div>
+
+  <!-- Go Top Button -->
+  <button id="scroll_top" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+  <!-- Header area start -->
+  <header class="header__area">
+    <div class="header__inner">
+      <div class="header__logo"><a href="index.html"><img class="logo-primary img-fluid"
+            src="assets/imgs/logo/logo-dark-h.png" alt="Site Logo"><img
+            class="logo-secondary img-fluid d-xl-none d-md-block d-none" src="assets/imgs/logo/main-logo-white -h.png"
+            alt="Moibile Logo"><img class="logo-secondary img-fluid d-md-none d-block"
+            src="assets/imgs/logo/main-logo-white -h.png" alt="Moibile Logo">
+        </a>
+      </div>
+      <div class="header__nav-icon">
+        <button id="open_offcanvas"><img src="assets/imgs/icon/menu-white.png" alt="Menubar Icon">
+        </button>
+      </div>
+      <div class="header__support">
+        <p>Support center<a href="tel:+9587325902">+91 93544 91934</a>
+        </p>
+      </div>
+    </div>
+  </header>
+  <!-- Header area end -->
+
+
+  <!-- Offcanvas area start -->
+  <div class="offcanvas__area">
+    <div class="offcanvas__body">
+      <div class="offcanvas__left">
+        <div class="offcanvas__logo"><a href="index.html"><img class="img-fluid" src="assets/imgs/logo/banner-l.png"
+              alt="Offcanvas Logo">
+          </a>
+        </div>
+        <div class="offcanvas__social">
+          <h3 class="social-title">Follow Us</h3>
+          <ul>
+            <li><a href="https://in.pinterest.com/infoviraladsmedia/">Pinterest</a>
+            </li>
+            <li><a href="https://www.behance.net/viraladsmedia">Behance</a>
+            </li>
+            <li><a href="https://www.instagram.com/viraladsmedia_/">Instagram</a>
+            </li>
+            <li><a href="https://www.facebook.com/viraladsmediaindia/">Facebook</a>
+            </li>
+            <li><a href="https://www.youtube.com/@ViralAdsMedia">YouTube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas__links">
+          <ul class="d-none">
+            <li><a href="about-dark.html">About</a>
+            </li>
+            <li><a href="#">contact</a>
+            </li>
+            <li><a href="coming-soon.html">Career</a>
+            </li>
+            <li><a href="coming-soon.html">blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas__mid">
+        <div class="offcanvas__menu-wrapper">
+          <nav class="offcanvas__menu">
+            <ul class="menu-anim list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-dark.html">About</a></li>
+              <li><a href="service-dark.html">Service</a></li>
+              <li><a href="coming-soon.html">Portfolio</a></li>
+              <li><a href="coming-soon.html">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="coming-soon.html">Career</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="offcanvas__right">
+        <div class="offcanvas__search">
+          <!-- <form action="#">
+            <input type="text" name="search" placeholder="Search keyword">
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form> -->
+        </div>
+        <div class="offcanvas__contact">
+          <h3>Get in touch</h3>
+          <ul>
+            <li><a href="tel:02094980547">+91 93544 91934</a>
+            </li>
+            <li><a href="mailto:info@extradesign.com">info@viraladsmedia.com</a>
+            </li>
+            <li>B-27, Khatu shyam Mandir Road, near Max Bazar, Budh Vihar Phase I, Delhi, 110086</li>
+          </ul>
+        </div><img src="assets/imgs/shape/11.png" alt="shape" class="shape-1"><img src="assets/imgs/shape/12.png"
+          alt="shape" class="shape-2">
+      </div>
+      <div class="offcanvas__close">
+        <button type="button" id="close_offcanvas">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Offcanvas area end -->
+
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main>
+
+         <!-- Header -->
+    <header class="terms-header text-center">
+        <div class="container">
+            <h1><i class="fas fa-file-contract me-2"></i>Terms & Conditions</h1>
+            <span class="last-updated"><i class="fas fa-clock me-1"></i>Last updated on 16-05-2025 10:46:53</span>
+        </div>
+    </header>
+       <!-- Main Content -->
+    <main class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="terms-container">
+                    <p>These Terms and Conditions, along with privacy policy or other terms ("Terms") constitute a binding agreement by and between Viral Ads Media, ("Website Owner" or "we" or "us" or "our") and you ("you" or "your") and relate to your use of our website, goods (as applicable) or services (as applicable) (collectively, "Services").</p>
+                    
+                    <h2>Acceptance of Terms</h2>
+                    <p>By using our website and availing the Services, you agree that you have read and accepted these Terms (including the Privacy Policy). We reserve the right to modify these Terms at any time and without assigning any reason. It is your responsibility to periodically review these Terms to stay informed of updates.</p>
+                    
+                    <div class="section-divider"></div>
+                    
+                    <h2>Terms of Use</h2>
+                    <p>The use of this website or availing of our Services is subject to the following terms of use:</p>
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item border-0 ps-0"><i class="fas fa-check-circle text-primary me-2"></i>To access and use the Services, you agree to provide true, accurate and complete information to us during and after registration, and you shall be responsible for all acts done through the use of your registered account.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fas fa-check-circle text-primary me-2"></i>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials offered on this website or through the Services, for any specific purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fas fa-check-circle text-primary me-2"></i>Your use of our Services and the website is solely at your own risk and discretion. You are required to independently assess and ensure that the Services meet your requirements.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fas fa-check-circle text-primary me-2"></i>The contents of the Website and the Services are proprietary to Us and you will not have any authority to claim any intellectual property rights, title, or interest in its contents.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fas fa-check-circle text-primary me-2"></i>You acknowledge that unauthorized use of the Website or the Services may lead to action against you as per these Terms or applicable laws.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fas fa-check-circle text-primary me-2"></i>You agree to pay us the charges associated with availing the Services.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fas fa-check-circle text-primary me-2"></i>You agree not to use the website and/or Services for any purpose that is unlawful, illegal or forbidden by these Terms, or Indian or local laws that might apply to you.</li>
+                        <li class="list-group-item border-0 ps-0"><i class="fas fa-check-circle text-primary me-2"></i>You agree and acknowledge that website and the Services may contain links to other third party websites. On accessing these links, you will be governed by the terms of use, privacy policy and such other policies of such third party websites.</li>
+                    </ul>
+                    
+                    <div class="section-divider"></div>
+                    
+                    <h2>Services and Refunds</h2>
+                    <p>You understand that upon initiating a transaction for availing the Services you are entering into a legally binding and enforceable contract with the us for the Services.</p>
+                    <p>You shall be entitled to claim a refund of the payment made by you in case we are not able to provide the Service. The timelines for such return and refund will be according to the specific Service you have availed or within the time period provided in our policies (as applicable). In case you do not raise a refund claim within the stipulated time, than this would make you ineligible for a refund.</p>
+                    
+                    <div class="section-divider"></div>
+                    
+                    <h2>Force Majeure</h2>
+                    <p>Notwithstanding anything contained in these Terms, the parties shall not be liable for any failure to perform an obligation under these Terms if performance is prevented or delayed by a force majeure event.</p>
+                    
+                    <div class="section-divider"></div>
+                    
+                    <h2>Governing Law and Jurisdiction</h2>
+                    <p>These Terms and any dispute or claim relating to it, or its enforceability, shall be governed by and construed in accordance with the laws of India.</p>
+                    <p>All disputes arising out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts in <span class="highlight">Pooth Kalan, Delhi</span>.</p>
+                    
+                    <div class="section-divider"></div>
+                    
+                    <h2>Contact Information</h2>
+                    <p>All concerns or communications relating to these Terms must be communicated to us using the contact information provided on this website.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+      </main>
+
+
+      <!-- Footer area start -->
+      <footer class="footer__area">
+        <div class="footer__top">
+          <div class="container footer-line"></div><img src="assets/imgs/thumb/footer.jpg" alt="Footer Image"
+            data-speed="0.75">
+        </div>
+        <div class="footer__btm">
+          <div class="container">
+            <div class="row footer__row">
+              <div class="col-xxl-12">
+                <div class="footer__inner">
+                  <div class="footer__widget"><img class="footer__logo " src="assets/imgs/logo/final logo png.png"
+                      alt="Footer Logo">
+                    <p>
+                      Empower your brand with our digital marketing and website development service.
+                    </p>
+                    <ul class="footer__social">
+                      <li><a href="https://www.facebook.com/viraladsmediaindia/"><span>
+                            <i class="fa-brands fa-facebook-f"></i>
+                          </span>
+                        </a>
+                      </li>
+                      <li><a href="https://www.youtube.com/@ViralAdsMedia"><span>
+                            <i class="fa-brands fa-youtube"></i>
+                          </span>
+                        </a>
+                      </li>
+                      <li><a href="https://www.instagram.com/viraladsmedia_/"><span>
+                            <i class="fa-brands fa-instagram"></i>
+                          </span>
+                        </a>
+                      </li>
+                      <li><a href="https://in.linkedin.com/in/viral-ads-media-34ba19280"><span>
+                            <i class="fa-brands fa-linkedin"></i>
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__widget-2">
+                    <h2 class="footer__widget-title">Information</h2>
+                    <ul class="footer__link">
+                      <li><a href="#">About Company</a>
+                      </li>
+                      <li><a href="#">Portfolio</a>
+                      </li>
+                      <li><a href="#">Career</a>
+                      </li>
+                      <li><a href="#">blog</a>
+                      </li>
+                      <li><a href="#">contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__widget-3">
+                    <h2 class="footer__widget-title">Contact Us</h2>
+                    <ul class="footer__contact">
+                      <li>B-27, Khatu shyam Mandir Road, near Max Bazar, Budh Vihar Phase I, Delhi, 110086
+                      </li>
+                      <li><a href="tel:+919354491934" class="phone">+91 93544 91934</a>
+                      </li>
+                      <li><a href="mailto:info@buildyexample.com">info@viraladsmedia.com</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="footer__widget-4">
+                    <h2 class="project-title">Have a project in your mind?</h2>
+                    <div class="btn_wrapper"><a href="https://wa.me/919354491934"
+                        class="wc-btn-primary btn-hover btn-item"><span></span> contact us
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </a>
+                    </div>
+                    <h3 class="contact-time">09 : 30 AM - 6 : 30 PM</h3>
+                    <h4 class="contact-day">6 Day</h4>
+                  </div>
+                  <div class="footer__copyright">
+                    <p>Copyright © 2024 - 2025 <br> Viral Ads Media
+                    </p>
+                  </div>
+                  <div class="footer__subscribe">
+                    <!-- <form action="#">
+                      <input type="email" name="email" placeholder="Enter your email">
+                      <button type="submit" class="subs-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                      </button>
+                    </form> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer area end -->
+
+
+    </div>
+  </div>
+
+
+
+  <!-- All JS files -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/ScrollToPlugin.min.js"></script>
+  <script src="assets/js/ScrollSmoother.min.js"></script>
+  <script src="assets/js/SplitText.min.js"></script>
+  <script src="assets/js/chroma.min.js"></script>
+  <script src="assets/js/mixitup.min.js"></script>
+  <script src="assets/js/vanilla-tilt.js"></script>
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+
+  <title>Viral Ads Media</title>
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- All CSS files -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/master.css">
+  <link rel="stylesheet" href="style.css">
+
+
+  <style>
+        .policy-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .policy-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .last-updated {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .policy-point {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .policy-point i {
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .highlight-box {
+            background-color: rgba(78, 115, 223, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="dark">
+
+  <!-- Cursor Animation -->
+  <div class="cursor1"></div>
+  <div class="cursor2"></div>
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loading">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <div class="bar bar4"></div>
+      <div class="bar bar5"></div>
+      <div class="bar bar6"></div>
+      <div class="bar bar7"></div>
+      <div class="bar bar8"></div>
+    </div>
+  </div>
+
+  <!-- Switcher Area Start -->
+  <div class="switcher__area">
+    <div class="switcher__icon">
+      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div class="switcher__items">
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <h2 class="switcher__title">Cursor</h2>
+        </div>
+        <div class="switcher__btn">
+          <select name="cursor-style" id="cursor_style">
+            <option value="1">default</option>
+            <option selected value="2">animated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <h2 class="switcher__title">mode</h2>
+        </div>
+        <div class="switcher__btn mode-type wc-col-2">
+          <button data-mode="light">light</button>
+          <button class="active" data-mode="dark">dark</button>
+        </div>
+      </div>
+
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <h2 class="switcher__title">Language Support</h2>
+        </div>
+        <div class="switcher__btn lang_dir wc-col-2">
+          <button class="active" data-mode="ltr">LTR</button>
+          <button data-mode="rtl">RTL</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Switcher Area End -->
+
+  <!-- Scroll Smoother -->
+  <div class="has-smooth" id="has_smooth"></div>
+
+  <!-- Go Top Button -->
+  <button id="scroll_top" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+
+  <!-- Header area start -->
+  <header class="header__area">
+    <div class="header__inner">
+      <div class="header__logo"><a href="index.html"><img class="logo-primary img-fluid"
+            src="assets/imgs/logo/logo-dark-h.png" alt="Site Logo"><img
+            class="logo-secondary img-fluid d-xl-none d-md-block d-none" src="assets/imgs/logo/main-logo-white -h.png"
+            alt="Moibile Logo"><img class="logo-secondary img-fluid d-md-none d-block"
+            src="assets/imgs/logo/main-logo-white -h.png" alt="Moibile Logo">
+        </a>
+      </div>
+      <div class="header__nav-icon">
+        <button id="open_offcanvas"><img src="assets/imgs/icon/menu-white.png" alt="Menubar Icon">
+        </button>
+      </div>
+      <div class="header__support">
+        <p>Support center<a href="tel:+9587325902">+91 93544 91934</a>
+        </p>
+      </div>
+    </div>
+  </header>
+  <!-- Header area end -->
+
+  <!-- Offcanvas area start -->
+  <div class="offcanvas__area">
+    <div class="offcanvas__body">
+      <div class="offcanvas__left">
+        <div class="offcanvas__logo"><a href="index.html"><img class="img-fluid" src="assets/imgs/logo/banner-l.png"
+              alt="Offcanvas Logo">
+          </a>
+        </div>
+        <div class="offcanvas__social">
+          <h3 class="social-title">Follow Us</h3>
+          <ul>
+            <li><a href="https://in.pinterest.com/infoviraladsmedia/">Pinterest</a>
+            </li>
+            <li><a href="https://www.behance.net/viraladsmedia">Behance</a>
+            </li>
+            <li><a href="https://www.instagram.com/viraladsmedia_/">Instagram</a>
+            </li>
+            <li><a href="https://www.facebook.com/viraladsmediaindia/">Facebook</a>
+            </li>
+            <li><a href="https://www.youtube.com/@ViralAdsMedia">YouTube</a>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas__links">
+          <ul class="d-none">
+            <li><a href="about-dark.html">About</a>
+            </li>
+            <li><a href="#">contact</a>
+            </li>
+            <li><a href="coming-soon.html">Career</a>
+            </li>
+            <li><a href="coming-soon.html">blog</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas__mid">
+        <div class="offcanvas__menu-wrapper">
+          <nav class="offcanvas__menu">
+            <ul class="menu-anim list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-dark.html">About</a></li>
+              <li><a href="service-dark.html">Service</a></li>
+              <li><a href="coming-soon.html">Portfolio</a></li>
+              <li><a href="coming-soon.html">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="coming-soon.html">Career</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="offcanvas__right">
+        <div class="offcanvas__search">
+          <!-- <form action="#">
+            <input type="text" name="search" placeholder="Search keyword">
+            <button>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form> -->
+        </div>
+        <div class="offcanvas__contact">
+          <h3>Get in touch</h3>
+          <ul>
+            <li><a href="tel:02094980547">+91 93544 91934</a>
+            </li>
+            <li><a href="mailto:info@extradesign.com">info@viraladsmedia.com</a>
+            </li>
+            <li>B-27, Khatu shyam Mandir Road, near Max Bazar, Budh Vihar Phase I, Delhi, 110086</li>
+          </ul>
+        </div><img src="assets/imgs/shape/11.png" alt="shape" class="shape-1"><img src="assets/imgs/shape/12.png"
+          alt="shape" class="shape-2">
+      </div>
+      <div class="offcanvas__close">
+        <button type="button" id="close_offcanvas">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Offcanvas area end -->
+
+    <!-- Refund policy -->
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+        <!-- Header -->
+        <header class="policy-header text-center">
+            <div class="container">
+                <h1><i class="fas fa-exchange-alt me-2"></i>Cancellation & Refund Policy</h1>
+                <span class="last-updated"><i class="fas fa-clock me-1"></i>Last updated on 16-05-2025 10:47:42</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="policy-container">
+                        <div class="highlight-box">
+                            <p class="mb-0"><strong>Viral Ads Media</strong> believes in helping its customers as far as possible, and has therefore a liberal cancellation policy. Under this policy:</p>
+                        </div>
+                        
+                        <div class="policy-point">
+                            <p><i class="fas fa-ban"></i> Cancellations will be considered only if the request is made immediately after placing the order. However, the cancellation request may not be entertained if the orders have been communicated to the vendors/merchants and they have initiated the process of shipping them.</p>
+                        </div>
+                        
+                        <div class="policy-point">
+                            <p><i class="fas fa-shopping-basket"></i> Viral Ads Media does not accept cancellation requests for perishable items like flowers, eatables etc. However, refund/replacement can be made if the customer establishes that the quality of product delivered is not good.</p>
+                        </div>
+                        
+                        <div class="policy-point">
+                            <p><i class="fas fa-exclamation-triangle"></i> In case of receipt of damaged or defective items please report the same to our Customer Service team. The request will, however, be entertained once the merchant has checked and determined the same at his own end. This should be reported within 7 Days days of receipt of the products. In case you feel that the product received is not as shown on the site or as per your expectations, you must bring it to the notice of our customer service within 7 Days days of receiving the product. The Customer Service Team after looking into your complaint will take an appropriate decision.</p>
+                        </div>
+                        
+                        <div class="policy-point">
+                            <p><i class="fas fa-shield-alt"></i> In case of complaints regarding products that come with a warranty from manufacturers, please refer the issue to them. In case of any Refunds approved by the Viral Ads Media, it'll take 6-8 Days days for the refund to be processed to the end customer.</p>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End main Content -->
+
+
+        <!-- Footer area start -->
+        <footer class="footer__area">
+            <div class="footer__top">
+            <div class="container footer-line"></div><img src="assets/imgs/thumb/footer.jpg" alt="Footer Image"
+                data-speed="0.75">
+            </div>
+            <div class="footer__btm">
+            <div class="container">
+                <div class="row footer__row">
+                <div class="col-xxl-12">
+                    <div class="footer__inner">
+                    <div class="footer__widget"><img class="footer__logo " src="assets/imgs/logo/final logo png.png"
+                        alt="Footer Logo">
+                        <p>
+                        Empower your brand with our digital marketing and website development service.
+                        </p>
+                        <ul class="footer__social">
+                        <li><a href="https://www.facebook.com/viraladsmediaindia/"><span>
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li><a href="https://www.youtube.com/@ViralAdsMedia"><span>
+                                <i class="fa-brands fa-youtube"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li><a href="https://www.instagram.com/viraladsmedia_/"><span>
+                                <i class="fa-brands fa-instagram"></i>
+                            </span>
+                            </a>
+                        </li>
+                        <li><a href="https://in.linkedin.com/in/viral-ads-media-34ba19280"><span>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </span>
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="footer__widget-2">
+                        <h2 class="footer__widget-title">Information</h2>
+                        <ul class="footer__link">
+                        <li><a href="#">About Company</a>
+                        </li>
+                        <li><a href="#">Portfolio</a>
+                        </li>
+                        <li><a href="#">Career</a>
+                        </li>
+                        <li><a href="#">blog</a>
+                        </li>
+                        <li><a href="#">contact</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="footer__widget-3">
+                        <h2 class="footer__widget-title">Contact Us</h2>
+                        <ul class="footer__contact">
+                        <li>B-27, Khatu shyam Mandir Road, near Max Bazar, Budh Vihar Phase I, Delhi, 110086
+                        </li>
+                        <li><a href="tel:+919354491934" class="phone">+91 93544 91934</a>
+                        </li>
+                        <li><a href="mailto:info@buildyexample.com">info@viraladsmedia.com</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="footer__widget-4">
+                        <h2 class="project-title">Have a project in your mind?</h2>
+                        <div class="btn_wrapper"><a href="https://wa.me/919354491934"
+                            class="wc-btn-primary btn-hover btn-item"><span></span> contact us
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        </div>
+                        <h3 class="contact-time">09 : 30 AM - 6 : 30 PM</h3>
+                        <h4 class="contact-day">6 Day</h4>
+                    </div>
+                    <div class="footer__copyright">
+                        <p>Copyright © 2024 - 2025 <br> Viral Ads Media
+                        </p>
+                    </div>
+                    <div class="footer__subscribe">
+                        <!-- <form action="#">
+                        <input type="email" name="email" placeholder="Enter your email">
+                        <button type="submit" class="subs-btn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        </form> -->
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </footer>
+        <!-- Footer area end -->
+
+
+        </div>
+    </div>
+
+  <!-- All JS files -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/ScrollToPlugin.min.js"></script>
+  <script src="assets/js/ScrollSmoother.min.js"></script>
+  <script src="assets/js/SplitText.min.js"></script>
+  <script src="assets/js/chroma.min.js"></script>
+  <script src="assets/js/mixitup.min.js"></script>
+  <script src="assets/js/vanilla-tilt.js"></script>
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
